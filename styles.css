@@ -1110,3 +1110,5 @@ footer {
 .gallery-item:hover .play-icon {
     transform: translate(-50%, -50%) scale(1.2);
 }
+
+/* CACHE BUSTER: v4.0 - 2026-02-03 */
