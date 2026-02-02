@@ -4,9 +4,42 @@ const projects = cmsData.projects;
 // Main Page Initialization
 document.addEventListener('DOMContentLoaded', () => {
     // Populate Hero Section
+    // Populate Hero Section
     if (document.getElementById('hero-headline')) {
-        document.getElementById('hero-headline').innerHTML = cmsData.hero.headline.replace(/\|/g, '<span class="separator">|</span>');
+        // Static text is hardcoded in HTML for structure, but we can ensure description is loaded
         document.getElementById('hero-description').innerText = cmsData.hero.description;
+
+        // Init Text Loop
+        const loopElement = document.getElementById('hero-loop');
+        const skills = ["Modeling", "Animation", "Lighting", "Cinematics"];
+        let skillIndex = 0;
+
+        if (loopElement) {
+            loopElement.textContent = skills[0]; // Start with first
+
+            // Smoother fade logic
+            setInterval(() => {
+                // Start Fade Out
+                loopElement.classList.add('fade-out');
+
+                // Wait for fade out transition (matches CSS 0.5s)
+                setTimeout(() => {
+                    skillIndex = (skillIndex + 1) % skills.length;
+                    loopElement.textContent = skills[skillIndex];
+
+                    // Start Fade In
+                    loopElement.classList.remove('fade-out');
+                    loopElement.classList.add('fade-in');
+
+                    // Clean up class after transition
+                    setTimeout(() => {
+                        loopElement.classList.remove('fade-in');
+                    }, 500);
+
+                }, 500); // 500ms match css transition
+
+            }, 2500); // Total cycle: 2s visible + 0.5s fade
+        }
 
         // Update Video Source
         const video = document.querySelector('.hero-video video');

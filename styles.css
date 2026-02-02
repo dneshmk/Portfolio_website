@@ -111,24 +111,26 @@ nav a:hover {
 }
 
 .hero-overlay h1 {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    /* Increased from 1.8rem for Impact */
+    font-weight: 700;
+    /* Bolder */
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
 }
 
-.hero-overlay .separator {
-    margin: 0 10px;
-    font-weight: 300;
-    opacity: 0.7;
-}
+
 
 .hero-overlay p {
-    font-size: 0.9rem;
-    font-weight: 300;
-    opacity: 0.8;
-    max-width: 600px;
+    font-size: 1.2rem;
+    /* Increased from 0.9rem */
+    font-weight: 400;
+    /* Slightly heavier than 300 */
+    opacity: 0.9;
+    max-width: 800px;
+    /* Wider to accommodate larger text */
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -522,145 +524,373 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-
-    /* 1. Header / Nav - Stacked & Spacious */
-    header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-        background-color: white;
-        /* Ensure visibility */
-    }
-
-    .logo {
-        font-size: 1.1rem;
-        width: 100%;
-        justify-content: center;
-        /* Center logo */
-    }
-
-    .logo span {
-        display: inline;
-        /* Show name again */
-    }
-
-    .logo img {
-        height: 40px !important;
-    }
-
-    nav {
-        width: 100%;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-        /* Allow wrapping if needed */
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        /* Readable size */
-        font-weight: 600;
-    }
-
-    /* 2. Hero Section - Balanced Height */
-    .hero {
-        height: 65vh;
-    }
-
-    .hero-overlay h1 {
-        font-size: 1.5rem;
-        line-height: 1.4;
-    }
-
-    .showcase-item {
-        width: 50vw;
-        /* 2 items visible, decent size */
-        height: 180px;
-    }
-
-    /* 3. Profile Section - Clean Stack */
+/* TABLET SPECIFIC (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .about-me {
-        flex-direction: column;
-        /* Stacked */
-        text-align: center;
-        gap: 40px;
-        padding: 60px 20px;
+        flex-direction: row !important;
+        /* Force side-by-side */
+        justify-content: center;
+        text-align: left;
+        gap: 50px;
+    }
+
+    .about-content {
+        text-align: left !important;
+        max-width: 50%;
     }
 
     .image-wrapper {
-        width: 180px;
-        /* Big, clear image */
-        height: 180px;
+        margin: 0;
+        /* Reset auto margin */
+    }
+}
+
+/* Shine Animation */
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Cinematic Smoke/Mist Animation */
+@keyframes smoke-mist {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+        transform: scale(1.01);
+    }
+
+    /* Subtle pulsating expansion */
+    100% {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+    }
+}
+
+.shine-text {
+    /* Brighter Silver base (#e6e6e6) with White shine */
+    background: linear-gradient(to right, #e6e6e6 0%, #e6e6e6 40%, #ffffff 50%, #e6e6e6 60%, #e6e6e6 100%);
+    background-size: 200% auto;
+    color: #e6e6e6;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite, smoke-mist 5s ease-in-out infinite alternate;
+}
+
+/* Static Headline (Blue) */
+.static-text {
+    color: #007CC0;
+    /* Medium Dark Sky Blue */
+    display: inline-block;
+    margin-right: 10px;
+    text-shadow: 0 0 10px rgba(0, 124, 192, 0.4);
+    font-size: 85%;
+    /* Reduced by 15% relative to parent h1 */
+}
+
+/* Looping Text (White) with Fade */
+.loop-text {
+    color: white;
+    display: inline-block;
+    min-width: 200px;
+    /* Prevent jumping */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+    opacity: 1;
+    font-size: 65%;
+    /* Reduced by 35% relative to parent h1 */
+}
+
+.loop-text.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.loop-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+
+    /* 1. Header / Nav */
+    header {
+        padding: 15px 5px;
+        /* Reduced side padding slightly to give nav more room */
+        flex-direction: column;
+        gap: 15px;
+        background-color: white;
+    }
+
+    /* Line 1: Logo + Name together */
+    .logo {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.9rem;
+        /* Slightly smaller to ensure fit */
+        display: flex;
+        align-items: center;
+        color: black;
+        /* Ensure color is black */
+    }
+
+    .logo img {
+        height: 30px !important;
+        width: auto;
+    }
+
+    .logo span {
+        display: inline-block;
+        margin-left: 8px;
+        white-space: nowrap;
+        /* Prevent breaking name */
+    }
+
+    /* Line 2: Links in ONE single line */
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        /* Tighter gap */
+        flex-wrap: nowrap;
+        padding: 0 10px;
+        /* Added padding as requested */
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        /* Smaller to fit 4 items on 360px */
+        white-space: nowrap;
+    }
+
+    /* 2. Hero Section */
+    .hero {
+        height: 55vh;
+        /* Reduced so Nav + Hero + Ticker fit on one screen */
+    }
+
+    .hero-overlay {
+        width: 95%;
+        /* Maximize width */
+    }
+
+    /* Force stack on mobile */
+    .static-text,
+    .loop-text {
+        display: block !important;
+        width: 100%;
+        margin-right: 0;
+        white-space: normal;
+        /* Allow wrap if absolutely needed but block usually handles it */
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.8rem;
+        /* Keep existing mobile size */
+        margin-bottom: 10px;
+        white-space: normal;
+        /* Allow wrapping of container */
+        overflow: visible;
+    }
+
+    /* Reduce Description Size as requested */
+    .hero-overlay p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        opacity: 0.9;
+        max-width: 95%;
+        /* Ensure it doesn't touch edges */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-overlay .separator {
+        display: none;
+        /* Hide confusing separator on mobile if distinct lines are better, or reduce spacing */
+    }
+
+    /* Ticker: 2 images at a time */
+    .showcase-item {
+        width: 50vw;
+        height: 140px;
+    }
+
+    /* 3. About Me Section - Reduced overall size by ~20% */
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+        /* Reduced padding */
+        gap: 15px;
+        /* Reduced gap */
+    }
+
+    /* Image First */
+    .about-image {
+        order: -1;
+    }
+
+    .image-wrapper {
+        width: 110px;
+        /* Reduced from 140px */
+        height: 110px;
         margin: 0 auto;
-        /* Center it */
-        border-width: 5px;
+        border-width: 3px;
     }
 
     .about-content {
         text-align: center;
     }
 
-    /* 4. Projects Section */
-    .projects {
-        padding: 40px 15px;
+    .about-content h2 {
+        font-size: 0.9rem;
+        /* Scaled down */
+        margin-bottom: 5px;
+        /* Tighter */
     }
 
-    .projects-nav {
-        flex-wrap: wrap;
-        /* Wrap buttons so they don't fall off screen */
-        justify-content: center;
-        gap: 10px;
-        overflow: visible;
-        margin-bottom: 40px;
+    .about-content h3 {
+        font-size: 1.2rem;
+        /* Scaled down from default */
+        margin: 5px 0 10px;
     }
+
+    .about-content p {
+        font-size: 0.8rem;
+        /* Scaled down */
+        line-height: 1.4;
+    }
+
+    /* 4. Work Section */
+    .projects {
+        padding: 30px 10px;
+
+        /* 8. Contact Section - Reduced by 50% */
+        .contact-footer {
+            padding: 40px 10px 10px;
+            /* Reduced from 80px 20px 20px */
+            min-height: 200px;
+            /* Reduced min-height significantly */
+        }
+
+        .cta-text {
+            font-size: 1rem;
+            /* Reduced from 1.5rem */
+            margin-bottom: 15px;
+        }
+
+        .contact-btn {
+            padding: 8px 20px;
+            /* Smaller button */
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+            font-size: 0.8rem;
+            /* Smaller text */
+        }
+
+        footer {
+            padding-top: 10px;
+            font-size: 0.6rem;
+        }
+    }
+
+    /* Categories: Single Horizontal Line */
+    .projects-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        /* No wrapping */
+        overflow-x: auto;
+        /* Horizontal scroll if needed */
+        justify-content: flex-start;
+        /* Start from left */
+        gap: 15px;
+        padding-bottom: 10px;
+        /* Space for scrollbar if visible */
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll */
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+        padding-left: 5px;
+        /* Slight padding for start */
+    }
+
+    .projects-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide Chrome */
 
     .projects-nav button {
-        font-size: 0.85rem;
-        padding: 8px 16px;
         flex: 0 0 auto;
-        /* Don't squash */
+        /* Do not shrink */
+        white-space: nowrap;
+        font-size: 0.8rem;
     }
 
-    /* Projects Grid - 1 Column for Premium Feel */
-    .project-card.large {
-        flex: 0 0 100%;
-        width: 100%;
-        height: 280px;
-        /* Taller for better impact */
-        margin-bottom: 15px;
-    }
-
+    /* Project Grid: 2 Columns Side-by-Side */
     .projects-grid {
-        gap: 20px;
+        justify-content: space-between;
+        /* ensure spacing */
+        gap: 10px;
+    }
+
+    .project-card.large {
+        flex: 0 0 calc(50% - 5px) !important;
+        /* Force 50% width */
+        width: calc(50% - 5px) !important;
+        height: 120px;
+        /* Reduced height proportional to width */
     }
 
     /* 5. Skills Section */
+    /* 5. Skills Section */
     .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* Strict 3x3 Grid */
+        gap: 10px;
+        width: 100%;
     }
 
     .skills-list span {
         width: auto;
-        padding: 5px 10px;
-        background: #222;
-        /* Slight pill background for readability */
-        border-radius: 4px;
-        font-size: 0.9rem;
+        min-width: 0;
+        /* Allow shrinking if needed */
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 8px 5px;
+        background: transparent;
+        border: none;
+        /* Removed border completely */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        /* Uniform height */
     }
 
     /* 6. Software Ticker */
     .software-item {
-        width: 30vw;
+        width: 25vw;
+        /* Smaller icons spacing */
     }
 
-    /* 7. Gallery Details - 1 Column for Safety/Clarity */
+    /* Gallery Details - Masonry 2 Columns */
     .gallery-grid {
-        column-count: 1 !important;
-        column-gap: 0;
+        column-count: 2 !important;
+        column-gap: 10px;
     }
 }
 
@@ -668,11 +898,6 @@ footer {
 @media (max-width: 400px) {
     .logo span {
         display: none;
-    }
-
-    /* Hide text logo on tiny screens */
-    .gallery-grid {
-        column-count: 1 !important;
     }
 }
 
@@ -837,11 +1062,7 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .gallery-grid {
-        column-count: 1;
-    }
-}
+
 
 /* Gallery Item Styling */
 .gallery-item {
