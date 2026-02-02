@@ -1,0 +1,1 @@
+A high-fidelity 3D character model of a cybernetic warrior. Modeled in ZBrush, retopologized in Maya, and textured in Substance Painter. The rig allows for complex combat animations.

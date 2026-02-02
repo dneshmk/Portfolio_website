@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Dinesh Kumar M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"
+                style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:15px;">
+                <img src="header/images/logo.svg" alt="Dinesh Logo" style="height: 40px; width: auto;">
+                <span>DINESH KUMAR M</span>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html#about">ABOUT ME</a>
+            <a href="index.html#projects">PROJECTS</a>
+            <a href="index.html#skills">SKILLS</a>
+            <a href="index.html#contact">CONTACT ME</a>
+        </nav>
+    </header>
+
+    <main class="detail-container">
+        <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+        <div id="project-content">
+            <!-- Content will be populated by JS -->
+            <h2 style="text-align:center; padding:50px;">Loading Project...</h2>
+        </div>
+    </main>
+
+    <section class="contact-footer">
+        <p class="cta-text">"INTERESTED IN WORKING TOGETHER?"</p>
+        <a href="mailto:dneshmk@gmail.com" class="contact-btn">CONTACT ME</a>
+        <div class="contact-info">
+            <p>+91 8073332016</p>
+            <p>dneshmk@gmail.com</p>
+        </div>
+        <footer>
+            COPYRIGHT TO DINESH KUMAR . 2026
+        </footer>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn">&#10094;</button>
+        <div class="lightbox-content-container">
+            <!-- Media will be injected here -->
+        </div>
+        <button class="nav-btn next-btn">&#10095;</button>
+    </div>
+
+    <script src="cms_data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Simple inline initialization for detail page
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            if (typeof loadProjectDetail === 'function') {
+                loadProjectDetail(projectId);
+            }
+        });
+    </script>
+</body>
+
+</html>

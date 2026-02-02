@@ -1,0 +1,9 @@
+Modeling
+Digital Sculpting
+Rigging
+Rendering and Compositing
+Texturing
+Animation
+UI Wireframing & Layouts
+AI Assisted Workflows
+Blender Python Scripting (Basic Tools & Automation)

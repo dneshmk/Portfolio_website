@@ -1,0 +1,1 @@
+A dynamic combat animation cycle demonstrating weight and impact.
