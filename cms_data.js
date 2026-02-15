@@ -121,7 +121,7 @@
                  ],
     "hero":  {
                  "headline":  "3D GENERALIST",
-                 "description":  "I Specialize In Character Modeling With Clean Topology, Expressive Details, And Production-Ready Rigs, Along With Visualization And Product Animation.",
+                 "description":  "",
                  "video":  "hero-section/main-hero/videos/hero-background.mp4"
              },
     "skills":  {
