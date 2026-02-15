@@ -1,1 +1,0 @@
-Lip-sync and emotional expression test using a custom facial rig.

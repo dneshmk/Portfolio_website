@@ -6,74 +6,31 @@
                 },
     "projects":  [
                      {
-                         "id":  "future-soldier",
-                         "description":  "Production-ready game character with optimized topology for real-time rendering.",
+                         "id":  "Teron",
+                         "description":  "This character was created for my personal animated cinematic short film and serves as one of the main antagonists. The robot is fully modeled, textured, and rigged for animation.\r\n\r\nDesigned with a strong, intimidating silhouette and detailed mechanical elements, the character reflects its powerful and menacing role in the story. The rig is production-ready, allowing for dynamic action sequences and expressive mechanical movement.\r\n\r\nBuilt with clean topology and optimized for cinematic animation workflows.",
                          "gallery":  [
-                                         "work/3d-character/future-soldier/images/hero.png",
-                                         "work/3d-character/future-soldier/images/saineeta dasu.png",
-                                         "work/3d-character/future-soldier/images/SAINEETA SCULPTURE.png",
-                                         "work/3d-character/future-soldier/images/Screenshot-2020-09-11-at-3.17.20-PM.png",
-                                         "work/3d-character/future-soldier/images/wall-e-upon-the-endless-sky-3840x2160-v0-0ff76k4cjhj91.png",
-                                         "work/3d-character/future-soldier/videos/vidmate.mp4"
+                                         "work/3d-character/Teron/images/P1.jpg",
+                                         "work/3d-character/Teron/images/P2.jpg",
+                                         "work/3d-character/Teron/images/P3.jpg",
+                                         "work/3d-character/Teron/images/P5.jpg",
+                                         "work/3d-character/Teron/images/r1.png",
+                                         "work/3d-character/Teron/images/Wireframe.png",
+                                         "work/3d-character/Teron/videos/rigvideo.mp4"
                                      ],
-                         "image":  "work/3d-character/future-soldier/images/hero.png",
+                         "image":  "work/3d-character/Teron/images/P1.jpg",
                          "category":  "3d-character",
-                         "title":  "Future Soldier"
+                         "title":  "Teron"
                      },
                      {
-                         "id":  "mystic-creature",
-                         "description":  "Creature design for a fantasy game. Focus on organic sculpting and subsurface scattering materials.",
-                         "gallery":  [
-                                         "work/3d-character/mystic-creature/images/hero.png"
-                                     ],
-                         "image":  "work/3d-character/mystic-creature/images/hero.png",
-                         "category":  "3d-character",
-                         "title":  "Mystic Creature"
-                     },
-                     {
-                         "id":  "space-girl",
-                         "description":  "A high-fidelity 3D character model of a cybernetic warrior. Modeled in ZBrush, retopologized in Maya, and textured in Substance Painter. The rig allows for complex combat animations.",
-                         "gallery":  [
-                                         "work/3d-character/space-girl/images/hero.png",
-                                         "work/3d-character/space-girl/images/showcase.png",
-                                         "work/3d-character/space-girl/videos/vidmate.mp4"
-                                     ],
-                         "image":  "work/3d-character/space-girl/images/hero.png",
-                         "category":  "3d-character",
-                         "title":  "Space Girl"
-                     },
-                     {
-                         "id":  "warrior-cyborg",
-                         "description":  "A high-fidelity 3D character model of a cybernetic warrior. Modeled in ZBrush, retopologized in Maya, and textured in Substance Painter. The rig allows for complex combat animations.",
-                         "gallery":  [
-                                         "work/3d-character/warrior-cyborg/images/hero.png",
-                                         "work/3d-character/warrior-cyborg/images/showcase.png",
-                                         "work/3d-character/warrior-cyborg/videos/vidmate.mp4"
-                                     ],
-                         "image":  "work/3d-character/warrior-cyborg/images/hero.png",
-                         "category":  "3d-character",
-                         "title":  "Warrior Cyborg"
-                     },
-                     {
-                         "id":  "combat-sequence",
+                         "id":  "Teron-intro",
                          "description":  "A dynamic combat animation cycle demonstrating weight and impact.",
                          "gallery":  [
-                                         "work/animation/combat-sequence/images/showcase.png",
-                                         "work/animation/combat-sequence/videos/vidmate.mp4"
+                                         "work/animation/Teron-intro/images/Thumbnail.png",
+                                         "work/animation/Teron-intro/videos/spear.mp4"
                                      ],
-                         "image":  "work/animation/combat-sequence/images/showcase.png",
+                         "image":  "work/animation/Teron-intro/images/Thumbnail.png",
                          "category":  "animation",
-                         "title":  "Combat Sequence"
-                     },
-                     {
-                         "id":  "facial-acting",
-                         "description":  "Lip-sync and emotional expression test using a custom facial rig.",
-                         "gallery":  [
-                                         "work/animation/facial-acting/images/showcase.png"
-                                     ],
-                         "image":  "work/animation/facial-acting/images/showcase.png",
-                         "category":  "animation",
-                         "title":  "Facial Acting"
+                         "title":  "Teron Intro"
                      },
                      {
                          "id":  "mythical-beast",

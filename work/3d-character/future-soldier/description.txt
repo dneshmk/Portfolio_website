@@ -1,1 +1,0 @@
-Production-ready game character with optimized topology for real-time rendering.
