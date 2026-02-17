@@ -1,1 +1,0 @@
-Photorealistic rendering of a modern living room interior using Ray Tracing.

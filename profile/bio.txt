@@ -1,2 +1,3 @@
-I'M A 3D CHARACTER ARTIST FOCUSED ON MODELING EXPRESSIVE CHARACTERS AND BUILDING EFFICIENT RIGS.
-ALONGSIDE CHARACTERS, I PRODUCE ARCHVIZ RENDERS AND PRODUCT ANIMATIONS WITH POLISHED VISUALS.
+Im a 3D Character Artist specializing in modeling expressive characters and building efficient, animator-friendly rigs. My focus is on creating strong silhouettes, believable forms, and clean topology that supports both deformation and performance.
+
+Beyond character work, I also produce high-quality architectural visualizations and product animations, delivering polished renders with strong lighting, composition, and attention to detail.
