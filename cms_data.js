@@ -61,6 +61,19 @@
                          "title":  "Eagle And Snake"
                      },
                      {
+                         "id":  "oldman",
+                         "description":  "This head bust study captures the character and personality of an elderly man through detailed sculpting and subtle expression. Special attention was given to skin texture, wrinkles, and facial structure to reflect age and life experience. The focus of this piece was realism, anatomy accuracy, and natural surface detailing, while maintaining a strong sense of character and presence.",
+                         "gallery":  [
+                                         "work/digital-sculpture/oldman/images/1.png",
+                                         "work/digital-sculpture/oldman/images/2.png",
+                                         "work/digital-sculpture/oldman/images/3.png",
+                                         "work/digital-sculpture/oldman/images/4.png"
+                                     ],
+                         "image":  "work/digital-sculpture/oldman/images/1.png",
+                         "category":  "digital-sculpture",
+                         "title":  "Oldman"
+                     },
+                     {
                          "id":  "Sealer",
                          "description":  "A sleek product animation showcasing a compact plastic bag sealer designed for everyday kitchen convenience. This project highlights the productâ€™s functionality, portability, and ease of use through clean modeling, realistic lighting, and smooth motion design.\r\n\r\nI handled the entire creative process, including animation, lighting, rendering, and final edit. The goal was to create a visually engaging presentation that clearly demonstrates the productâ€™s features while maintaining a polished, commercial-ready look.",
                          "gallery":  [
